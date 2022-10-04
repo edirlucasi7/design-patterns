@@ -1,6 +1,6 @@
 package br.com.alura.loja.deduction;
 
-import br.com.alura.loja.orcamento.Orcamento;
+import br.com.alura.loja.orcamento.Budget;
 
 import java.math.BigDecimal;
 
@@ -11,12 +11,12 @@ public class WithoutDeduction extends Deduction {
     }
 
     @Override
-    public BigDecimal deductionCalc(Orcamento orcamento) {
+    public BigDecimal deductionCalc(Budget budget) {
         return BigDecimal.ZERO;
     }
 
     @Override
-    public boolean shouldApply(Orcamento orcamento) {
+    public boolean shouldApply(Budget budget) {
         return true;
     }
 }

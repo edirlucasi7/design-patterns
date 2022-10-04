@@ -1,6 +1,6 @@
 package br.com.alura.loja.deduction;
 
-import br.com.alura.loja.orcamento.Orcamento;
+import br.com.alura.loja.orcamento.Budget;
 
 import java.math.BigDecimal;
 
@@ -11,12 +11,12 @@ public class DeductionMajorWhenValueMajorThatFiveHundred extends Deduction {
     }
 
     @Override
-    public BigDecimal deductionCalc(Orcamento orcamento) {
-        return orcamento.getValue().multiply(new BigDecimal("0.2"));
+    public BigDecimal deductionCalc(Budget budget) {
+        return budget.getValue().multiply(new BigDecimal("0.2"));
     }
 
     @Override
-    public boolean shouldApply(Orcamento orcamento) {
-        return orcamento.getValue().compareTo(new BigDecimal("500")) > 0;
+    public boolean shouldApply(Budget budget) {
+        return budget.getValue().compareTo(new BigDecimal("500")) > 0;
     }
 }

@@ -1,6 +1,6 @@
 package br.com.alura.loja.deduction;
 
-import br.com.alura.loja.orcamento.Orcamento;
+import br.com.alura.loja.orcamento.Budget;
 
 import java.math.BigDecimal;
 
@@ -12,13 +12,13 @@ public abstract class Deduction {
         this.next = next;
     }
 
-    public BigDecimal calc(Orcamento orcamento) {
-        if(shouldApply(orcamento)) {
-            return deductionCalc(orcamento);
+    public BigDecimal calc(Budget budget) {
+        if(shouldApply(budget)) {
+            return deductionCalc(budget);
         }
-        return next.calc(orcamento);
+        return next.calc(budget);
     }
 
-    protected abstract BigDecimal deductionCalc(Orcamento orcamento);
-    protected abstract boolean shouldApply(Orcamento orcamento);
+    protected abstract BigDecimal deductionCalc(Budget budget);
+    protected abstract boolean shouldApply(Budget budget);
 }
