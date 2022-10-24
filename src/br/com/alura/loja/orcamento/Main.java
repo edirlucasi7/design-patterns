@@ -1,9 +1,9 @@
 package br.com.alura.loja.orcamento;
 
-import br.com.alura.loja.demand.GenerateOrder;
-import br.com.alura.loja.demand.GenerateOrderHandler;
+import br.com.alura.loja.demand.*;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +16,9 @@ public class Main {
         System.out.println(budget);
 
         GenerateOrder order = new GenerateOrder("Edir", new BigDecimal("100"), 2);
-        GenerateOrderHandler handler = new GenerateOrderHandler(); // poderia passar aqui qualquer coisa injetada
+        GenerateOrderHandler handler = new GenerateOrderHandler(
+                Arrays.asList(new SendEmailOrder())
+        ); // poderia passar aqui qualquer coisa injetada
         handler.execute(order);
     }
 }

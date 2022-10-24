@@ -1,11 +1,6 @@
 package br.com.alura.loja.demand;
 
-import br.com.alura.loja.demand.Demand;
-import br.com.alura.loja.orcamento.Budget;
-
 import java.math.BigDecimal;
-
-import static java.time.LocalDateTime.now;
 
 public class GenerateOrder {
 
