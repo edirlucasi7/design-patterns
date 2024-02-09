@@ -1,4 +1,4 @@
-package br.com.patterns.strategy.sso;
+package br.com.patterns.strategy;
 
 public enum SSOProtocol {
 

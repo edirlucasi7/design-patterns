@@ -1,6 +1,6 @@
-package br.com.patterns.strategy.sso;
+package br.com.patterns.strategy;
 
-import br.com.patterns.strategy.user.User;
+import br.com.patterns.user.User;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package br.com.patterns.strategy.user;
+package br.com.patterns.user;
 
 import java.util.Optional;
 
