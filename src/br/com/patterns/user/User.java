@@ -11,6 +11,8 @@ public class User {
     private String email;
     private int enrollment;
 
+    private Permission permission;
+
     public User(Long id, String name, String email) {
         this.id = id;
         this.name = name;
@@ -21,6 +23,13 @@ public class User {
         this.id = id;
         this.name = name;
         this.enrollment = enrollment;
+    }
+
+    public User(Long id, String name, int enrollment, Permission permission) {
+        this.id = id;
+        this.name = name;
+        this.enrollment = enrollment;
+        this.permission = permission;
     }
 
     public Long getId() {
@@ -37,6 +46,10 @@ public class User {
 
     public int getEnrollment() {
         return enrollment;
+    }
+
+    public Permission getPermission() {
+        return permission;
     }
 
     // simula um repository/ida ao banco
